@@ -1,0 +1,83 @@
+.add-form-container {
+    margin: 35px 50px 0 50px;
+    width: 780px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.input-block {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.full-line-container {
+    width: 750px;
+    height: 25px;
+}
+
+.add-page-input {
+    width: 750px;
+    height: 25px;
+    float: left;
+}
+
+.add-page-lbl {
+    width: 200;
+    margin: 0 10px 5px 0;
+    float: left;
+}
+
+.txtarea-input-block {
+    height: 140px;
+}
+
+.add-page-txt-area {
+    width: 750px;
+    height: 120px;
+    resize: none;
+}
+
+.add-page-date-input {
+    float: left;
+    width: 150px;
+    margin-left: -52px;
+}
+
+.add-page-duration {
+    width: 150px;
+    margin-left: -87px;
+}
+
+.add-page-btns-block {
+    height: auto;
+    margin-top: 35px;
+}
+
+.add-page-btn {
+    float: left;
+    margin-right: 15px;
+}
+
+.formated-duration-value {
+    float: left;
+    padding: 5px 0 0 15px;
+}
+
+.error-border {
+    border: none;
+    outline: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-weight: 550;
+    padding-top: 2px;
+}
+
+.error-label {
+    display: none;
+}
+
+.input-block:hover .error-label {
+    display: block;
+}

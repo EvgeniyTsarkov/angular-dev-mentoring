@@ -1,0 +1,65 @@
+<div class="main-page-container main-text-clr">
+    <div class="form-wrapper shadow">
+        <div *ngIf="addCourseModel">
+            <form class="add-form-container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                <div class="input-block">
+                    <label class="form-lbl-txt add-page-lbl">Title:</label>
+                    <div *ngIf="form.get('name')?.hasError('required')" class="error error-label">
+                        This field is required.</div>
+                    <div *ngIf="form.get('name')?.hasError('maxlength')" class="error error-label">
+                        {{maxTitleFieldErrorMessage}}
+                    </div>
+                    <input class="add-page-input" type="text" name="name" formControlName="name" [ngClass]="{'error-border': form.get('name')?.hasError('required') 
+                        || form.get('name')?.hasError('maxlength')}">
+                </div>
+                <div class="input-block txtarea-input-block">
+                    <label class="form-lbl-txt add-page-lbl">Description:</label>
+                    <div *ngIf="form.get('description')?.hasError('maxlength')" class="error error-label">
+                        {{maxDescriptionFieldErrorMessage}}
+                    </div>
+                    <textarea class="add-page-txt-area" type="text" name="description" formControlName="description"
+                        [ngClass]="{'error-border' :form.get('description')?.hasError('maxlength')}">
+                    </textarea>
+                </div>
+                <div class="input-block">
+                    <div class="full-line-container">
+                        <label class="form-lbl-txt add-page-lbl">Date:</label>
+                        <div *ngIf="form.get('date')?.hasError('invalidDateFormat')" class="error error-label">
+                            {{wrongDateFormatErrorMessage}}
+                        </div>
+                    </div>
+                    <input class="add-page-input add-page-date-input" appDateField name="date"
+                        [ngClass]="{'error-border' :form.get('date')?.hasError('invalidDateFormat')}"
+                        formControlName="date">
+                </div>
+                <div class="input-block">
+                    <div class="full-line-container">
+                        <label class="form-lbl-txt add-page-lbl">Duration:</label>
+                        <div *ngIf="form.get('length')?.hasError('invalidCourseDuration')" class="error error-label">
+                            {{courseLengthErrorMessage}}
+                        </div>
+                    </div>
+                    <input class="add-page-input add-page-duration" appLengthField name="length"
+                        [ngClass]="{'error-border' :form.get('length')?.hasError('invalidCourseDuration')}"
+                        formControlName="length">
+                    <span class="formated-duration-value" *ngIf="+addCourseModel.length > 0">{{+addCourseModel.length
+                        |formatDuration}}</span>
+                </div>
+                <div class="input-block">
+                    <div>
+                        <label class="form-lbl-txt add-page-lbl">Authors:</label>
+                        <div *ngIf="form.get('authors')?.hasError('authorsInputInvalid')" class="error error-label">
+                            {{authorsErrorMessage}}
+                        </div>
+                    </div>
+                    <app-add-authors [savedAuthors]="addCourseModel.authors" formControlName="authors" appAuthorsField
+                        [ngClass]="{'error-border' :form.get('authors')?.hasError('authorsInputInvalid')}"></app-add-authors>
+                </div>
+                <div class="add-page-btns-block">
+                    <button type="submit" class="form-btn add-page-btn" [disabled]="!form.valid">Save</button>
+                    <button class="form-btn add-page-btn" (click)="onClickCancel()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="main-page-container main-text-clr">
+    <div class="form-wrapper shadow">
+        <form class="login-form-container" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+            <h2>Login</h2>
+            <div class="lgn-lbl">
+                <label class="email-label">Email:</label>
+                <span class="lgn-required">*required</span>
+            </div>
+            <input class="lgn-input" formControlName="email" placeholder="Enter e-mail">
+            <div class="lgn-lbl">
+                <label class="email-label">Password:</label>
+                <span class="lgn-required">*required</span>
+            </div>
+            <input class="lgn-input" formControlName="password" placeholder="Enter password">
+            <div class="lgn-lbl">
+                <div class="fgt-psw-link">
+                    <a href="##" class="fgt-psw-link">Forgot password?</a>
+                </div>
+                <button class="form-btn" type="submit" [disabled]="!loginForm.valid">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

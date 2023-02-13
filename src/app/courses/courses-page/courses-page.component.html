@@ -1,0 +1,9 @@
+<div class="main-container">
+    <div class="text-search-box">
+        <input id="text-input" [formControl]="searchInput" placeholder="Text to search">
+    </div>
+    <div class="add-course-btn-holder">
+        <button class="add-course-btn std-btn text-clr" [routerLink]="['./new']">+ Add course</button>
+    </div>
+    <app-courses-list id="courses-list" [listItems]="(courses$|async)!"></app-courses-list>
+</div>

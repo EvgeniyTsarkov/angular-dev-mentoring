@@ -1,0 +1,11 @@
+.breadcrumbs {
+    margin-top: 15px;
+    height: 40px;
+}
+
+.breadcrumbs-text {
+    padding: 15px 0 15px 90px;
+    font-weight: 700;
+    font-size: 90%;
+    color: rgb(96, 95, 103);
+}

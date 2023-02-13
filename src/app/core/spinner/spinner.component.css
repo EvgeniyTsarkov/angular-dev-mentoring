@@ -1,0 +1,32 @@
+.spinner-container {
+    opacity: 0.5;
+    width: 1400px;
+    height: 100%;
+    z-index: 10;
+    margin-left: 7px;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.spinner {
+    height: 45px;
+    width: 45px;
+    border: 7px solid #ccc;
+    border-top: 7px solid #00aeff;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}

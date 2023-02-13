@@ -1,0 +1,18 @@
+.paginator-container {
+    height: 40px;
+    width: 1170px;
+    margin: 60px 90px 20px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    margin-top: -3px;
+}
+
+.paginator-flex-box {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 7px;
+    font-weight: 400;
+}

@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div *ngIf="listItems?.length; else noCourses">
+        <div class="courses-list-box" *ngFor="let courseItem of paginatedItems">
+            <app-course-item [listItem]="courseItem" (deleteClicked)="openModal($event)"></app-course-item>
+        </div>
+    </div>
+    <ng-template #noCourses>
+        <div class="no-data-container">
+            <div class="no-data-text main-text-clr">
+                <span>NO DATA. FEEL FREE TO ADD NEW COURSE</span>
+            </div>
+        </div>
+    </ng-template>
+    <div class="paginator">
+        <app-pagination [coursesNumber]="coursesNumber" 
+        (pageNumberClicked)="getPaginatedCourses($event)"></app-pagination>
+    </div>
+</div>
+
+<jw-modal id="modal-1">
+    <h2>Do you really want to delete this course? Yes/No</h2>
+    <div class="modal-buttons-container">
+        <button class="btn std-btn mdl-btn" (click)="deleteItem()">Yes</button>
+        <button class="btn std-btn mdl-btn" (click)="closeModal()">No</button>
+    </div>
+</jw-modal>

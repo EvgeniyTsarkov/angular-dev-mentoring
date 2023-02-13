@@ -1,0 +1,37 @@
+.input-block {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.add-page-input {
+    width: 750px;
+    height: 25px;
+    float: left;
+}
+
+.add-page-lbl {
+    width: 700px;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.authors-tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background-color: white;
+    outline: 1px solid black;
+}
+
+.authors-tags {
+    margin-top: -4px;
+    margin-left: 3px;
+}
+
+.authors-input-field {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+}

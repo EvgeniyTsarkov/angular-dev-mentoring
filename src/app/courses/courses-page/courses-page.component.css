@@ -1,0 +1,57 @@
+.main-container {
+    height: fit-content;
+    padding-bottom: 20px;
+    background-color: rgb(242, 243, 247);
+    width: 1200;
+}
+
+.text-search-box {
+    padding-top: 20px;
+    margin-left: 90px;
+    height: 30px;
+}
+
+#text-input {
+    height: 25px;
+    width: 200px;
+    float: left;
+}
+
+.search-btn {
+    border: none;
+    height: 31px;
+    width: 70px;
+    float: left;
+    background-color: rgb(155, 200, 55);
+    text-align: center;
+    padding-top: 3px;
+    margin-left: 4px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: small;
+}
+
+.search-btn:hover {
+    background-color: rgb(155, 185, 55);
+}
+
+.search-btn:active {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+    outline: none;
+}
+
+.add-course-btn-holder {
+    width: 1260px;
+    margin-top: 40px;
+}
+
+.add-course-btn {
+    height: 25px;
+    width: 150px;
+    float: right;
+    border-radius: 4px;
+    font-size: 80%;
+}

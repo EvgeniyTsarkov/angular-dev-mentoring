@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header-content">
+        <div class="logo-container">
+            <app-logo class="text-clr"></app-logo>
+        </div>
+        <div class="authentication-container">
+            <div class="authentication-block text-clr">
+                <div class="user-name" *appIsAuthenticated="!isAuthenticated()">{{username | async}}</div>
+                <button class="logoff-btn text-clr" (click)="onLogoffButtonClick()">Log off</button>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,15 @@
+.main-404-body {
+    width: 900px;
+    height: 600px;
+    background-color: white;
+}
+
+.text-container {
+    margin: 25px 0 0 30px;
+}
+
+.main-404-text {
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+}

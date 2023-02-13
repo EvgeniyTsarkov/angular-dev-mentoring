@@ -1,0 +1,11 @@
+<div class="add-page-input authors-tags-container">
+    <div class="authors-tags" *ngFor="let author of savedAuthors">
+        <app-author-tag class="author-tag" [author]="author" (deleteClicked)="deleteAuthor($event)">
+        </app-author-tag>
+    </div>
+    <input class="authors-input-field" list="SearchListResults" #SearchList (change)="selectAuthor(SearchList.value)">
+    <datalist id="SearchListResults">
+        <option *ngFor="let author of allAuthors$ |async">
+            {{author.name}}</option>
+    </datalist>
+</div>

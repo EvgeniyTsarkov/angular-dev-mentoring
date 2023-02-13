@@ -1,0 +1,23 @@
+<div class="container main-text-clr" appDateHighlight itemCreationDate={{listItem.date}}
+    [ngClass]="{'top-rated' : listItem.isTopRated}">
+    <div class="course-info-box">
+        <div class="title-and-data">
+            <div class="course-title">Video Course {{listItem.id}}. {{listItem.name | uppercase}}
+                <span *ngIf="listItem.isTopRated" ngClass="fa fa-star checked"></span>
+            </div>
+            <div class="metadata-box">
+                <div class="course-duration">{{listItem.length | formatDuration}}</div>
+                <div class="course-date">{{listItem.date | date: 'd MMM, YYYY'}}</div>
+            </div>
+        </div>
+        <div class="description-text">
+            {{listItem.description}}
+        </div>
+    </div>
+    <div class="btns-box">
+        <div class="buttons-container">
+            <button class="edit-btn text-clr btn std-btn" (click)="onEditButtonClick()">Edit</button>
+            <button class="delete-btn text-clr btn std-btn" (click)="onDeleteButtonClick()">Delete</button>
+        </div>
+    </div>
+</div>

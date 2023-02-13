@@ -1,0 +1,44 @@
+.header {
+    background-color: rgb(52, 49, 49);
+    height: 40px;
+}
+
+.header-content {
+    width: 1300px;
+}
+
+.logo-container {
+    width: 50%;
+    float: left;
+    padding: 10px 0 0 100px;
+}
+
+.authentication-container {
+    width: auto;
+    float: right;
+    padding-top: 10px;
+}
+
+.authentication-block {
+    float: right;
+    display: flex;
+    width: 200px;
+    font-size: small;
+}
+
+.user-name {
+    padding: 3px 7px 0 0;
+    font-size: 90%;
+    font-size: smaller;
+}
+
+button {
+    padding-left: 7px;
+    background-color: rgb(52, 49, 49);
+    border: none;
+    font-size: 90%;
+}
+
+button:active {
+    background-color: rgb(90, 75, 75);
+}
